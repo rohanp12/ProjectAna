@@ -98,7 +98,7 @@ build_script:
     # - ECHO "File upload to S3 Successfull 64 bit"
   
 artifacts:
-      - path: build\ProjectAnaBuild.exe
+      - path: build\*.exe
       - name: myartifact
 deploy:
 
