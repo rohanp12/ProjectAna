@@ -98,17 +98,5 @@ build_script:
     # - ECHO "File upload to S3 Successfull 64 bit"
   
 artifacts:
-      path: build\*.exe
+      path: myartifact.zip
       name: myartifact
-deploy:
-
-  provider: GitHub
-  auth_token:
-    secure: 43bb893bb308a8b0183ee85adc619cdd8d037e30 # your encrypted token from GitHub
-  artifact: myartifact           # upload all NuGet packages to release assets
-  draft: false
-  prerelease: false
-  on:
-    branch: master                 # release from master branch only
-    APPVEYOR_REPO_TAG: true        # deploy on tag push only
-
