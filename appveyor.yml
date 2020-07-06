@@ -97,6 +97,8 @@ build_script:
     # - aws s3 cp release %s3-bucket-path%/win-x64/ --exclude "win*" --include "Ana*.exe" --recursive --acl public-read
     # - ECHO "File upload to S3 Successfull 64 bit"
   
+artifacts:
+      - path: build\ProjectAnaBuild.exe 
 deploy:
     # FTP deployment provider settings
   - provider: S3
