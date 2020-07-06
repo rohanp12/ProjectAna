@@ -99,7 +99,7 @@ build_script:
   
 artifacts:
       - path: build\ProjectAnaBuild.exe
-      name: myartifact
+      - name: myartifact
 deploy:
 
   provider: GitHub
