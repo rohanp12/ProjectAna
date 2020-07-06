@@ -98,33 +98,17 @@ build_script:
     # - ECHO "File upload to S3 Successfull 64 bit"
   
 artifacts:
-      - path: build\ProjectAnaBuild.exe 
+      - path: build\ProjectAnaBuild.exe
+      name: myartifact
 deploy:
-    # FTP deployment provider settings
-  - provider: S3
-    access_key_id: "%AWS_ACCESS_KEY_ID%"
-    secret_access_key: "%AWS_SECRET_ACCESS_KEY%"
-    bucket: "%s3-bucket-name%"
-    region: ap-south-1
-    set_public: true
-    folder: s3-folder-path/win-x64
-    artifact: deploy-folder
-    on:
-      branch:
-        - release
-        - release-beta
 
-    # Amazon S3 deployment provider settings
-  - provider: S3
-    access_key_id: "%AWS_ACCESS_KEY_ID%"
-    secret_access_key: "%AWS_SECRET_ACCESS_KEY%"
-    bucket: "%s3-bucket-name%"
-    region: ap-south-1
-    set_public: true
-    folder: s3-folder-path/win-ia32
-    artifact: deploy-folder
-    on:
-      branch:
-        - release
-        - release-beta
+  provider: GitHub
+  auth_token:
+    secure: 43bb893bb308a8b0183ee85adc619cdd8d037e30 # your encrypted token from GitHub
+  artifact: myartifact           # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    APPVEYOR_REPO_TAG: true        # deploy on tag push only
 
