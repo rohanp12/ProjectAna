@@ -44,7 +44,6 @@
     "node-sass": "^4.14.1",
     "rxjs": "^5.5.2",
     "ts-md5": "^1.2.4",
-    "underscore": "^1.8.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
@@ -54,16 +53,17 @@
     "@types/bson": "^1.0.11",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "^2.0.8",
-    "@types/jquery": "^3.5.0",
+    "@types/jquery": "^3.3.31",
     "@types/jsonpath": "^0.2.0",
     "@types/mousetrap": "^1.6.3",
     "@types/node": "^6.14.10",
     "@types/shelljs": "^0.7.9",
-    "@types/underscore": "^1.10.4",
+    "@types/underscore": "^1.8.5",
     "codelyzer": "^4.5.0",
     "electron-builder": "^19.56.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
+    "jquery": "^3.3.1",
     "karma": "~1.7.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-cli": "~1.0.1",
@@ -74,6 +74,7 @@
     "shelljs": "^0.7.8",
     "ts-node": "~3.3.0",
     "tslint": "~5.7.0",
-    "typescript": "^3.9.6"
+    "typescript": "^2.4.2",
+    "underscore": "^1.8.3"
   }
 }
