@@ -1,3 +1,4 @@
+import $ = require("jquery");
 
 var input = "Order a burger"
 
