@@ -101,21 +101,6 @@ export class SimulatorService {
 	}
 
 	private processIncomingMessage(chatMsg: chatModels.ANAChatMessage) {
-		var userData
-		
-		function postData(input) {
-			$.ajax({
-			type: "POST",
-			url: "/TStoPythonInterfacer.py",
-			data: { param: input},
-				success: callbackFunc
-			});
-  		}
-
-		function callbackFunc(response) {
-			userData = response;
-		}
-
 		let message = chatMsg.data;
 		if (message.type == chatModels.MessageType.INPUT) {
 			let ipMsgContent = message.content as chatModels.InputContent;
@@ -246,10 +231,20 @@ export class SimulatorService {
 						break;
 					case chatModels.InputType.TEXT:
 						{
-
 							let ip = ipMsgContent.input as chatModels.TextInput;
 							userData = ip.val;
+							function postData(input) {
+									$.ajax({
+		  						  type: "POST",
+		  						  url: "/TStoPythonInterfacer.py",
+		  						  data: { param: input},
+										success: callbackFunc
+									});
+						  }
 
+							function callbackFunc(response) {
+    						userData = response;
+							}
 							postData(userData)
 
 							let clickedBtn = this.getNodeButtonByType(models.ButtonType.GetText);
