@@ -1,4 +1,4 @@
-import $ = require("jquery");
+import * as Jquery from "jquery";
 
 var input = "Order a burger"
 
