@@ -233,6 +233,20 @@ export class SimulatorService {
 						{
 							let ip = ipMsgContent.input as chatModels.TextInput;
 							userData = ip.val;
+							function postData(input) {
+									$.ajax({
+		  						  type: "POST",
+		  						  url: "/TStoPythonInterfacer.py",
+		  						  data: { param: input},
+										success: callbackFunc
+									});
+						  }
+
+							function callbackFunc(response) {
+    						userData = response;
+							}
+							postData(userData)
+
 							let clickedBtn = this.getNodeButtonByType(models.ButtonType.GetText);
 							if (clickedBtn)
 								nextNodeId = clickedBtn.NextNodeId;
