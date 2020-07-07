@@ -102,7 +102,7 @@ export class SimulatorService {
 
 	private processIncomingMessage(chatMsg: chatModels.ANAChatMessage) {
 		var userData
-		
+
 		function postData(input) {
 			$.ajax({
 			type: "POST",
@@ -250,7 +250,7 @@ export class SimulatorService {
 							let ip = ipMsgContent.input as chatModels.TextInput;
 							userData = ip.val;
 
-							postData(userData)
+							//postData(userData)
 
 							let clickedBtn = this.getNodeButtonByType(models.ButtonType.GetText);
 							if (clickedBtn)
