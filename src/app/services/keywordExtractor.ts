@@ -12,7 +12,7 @@ export function keywordExtraction(input) {
 });
 var responseString = "";
 for (var i=0; i<extraction_result.length();i++ ) {
-  responseString += extraction_result[i];
+  responseString += extraction_result[i] + " ";
 }
 
 return responseString;
