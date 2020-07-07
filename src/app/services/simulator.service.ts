@@ -10,6 +10,9 @@ import { GlobalsService } from '../services/globals.service';
 import { InfoDialogService } from '../services/info-dialog.service';
 import { SimulatorFrameComponent } from '../components/studio/simulator-frame/simulator-frame.component';
 import { CarouselButton } from '../models/chatflow.models';
+
+import {keywordExtraction} from './keywordExtractor';
+
 @Injectable()
 export class SimulatorService {
 
@@ -101,23 +104,6 @@ export class SimulatorService {
 	}
 
 	private processIncomingMessage(chatMsg: chatModels.ANAChatMessage) {
-		var userData
-
-		function postData(input) {
-			$.ajax({
-			type: "POST",
-			url: "/TStoPythonInterfacer.py",
-			data: { param: input},
-			success: callbackFunc,
-			error: function() {
-				userData = "Error detected!"
-			}
-			});
-  		}
-
-		function callbackFunc(response) {
-			userData = response;
-		}
 
 		let message = chatMsg.data;
 		if (message.type == chatModels.MessageType.INPUT) {
@@ -253,7 +239,7 @@ export class SimulatorService {
 							let ip = ipMsgContent.input as chatModels.TextInput;
 							userData = ip.val;
 
-							postData(userData)
+							userData = keywordExtraction(userData);
 
 							let clickedBtn = this.getNodeButtonByType(models.ButtonType.GetText);
 							if (clickedBtn)
