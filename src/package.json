@@ -57,8 +57,11 @@
     }
   },
   "dependencies": {
-    "electron-updater": "^2.20.1"
+    "electron-updater": "^2.20.1",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.0"
   }
 }
