@@ -156,15 +156,6 @@
         "tslib": "^1.7.1"
       }
     },
-    "@angular/compiler": {
-      "version": "5.2.11",
-      "resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-5.2.11.tgz",
-      "integrity": "sha512-ICvB1ud1mxaXUYLb8vhJqiLhGBVocAZGxoHTglv6hMkbrRYcnlB3FZJFOzBvtj+krkd1jamoYLI43UAmesqQ6Q==",
-      "dev": true,
-      "requires": {
-        "tslib": "^1.7.1"
-      }
-    },
     "@angular/compiler-cli": {
       "version": "5.1.1",
       "resolved": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-5.1.1.tgz",
@@ -6023,10 +6014,10 @@
           "dev": true,
           "optional": true,
           "requires": {
-            "boom": "2.10.1",
-            "cryptiles": "2.0.5",
-            "hoek": "2.16.3",
-            "sntp": "1.0.9"
+            "boom": "2.x.x",
+            "cryptiles": "2.x.x",
+            "hoek": "2.x.x",
+            "sntp": "1.x.x"
           }
         },
         "hoek": {
@@ -6227,8 +6218,8 @@
           "dev": true,
           "optional": true,
           "requires": {
-            "abbrev": "1.1.0",
-            "osenv": "0.1.4"
+            "abbrev": "1",
+            "osenv": "^0.1.4"
           }
         },
         "npmlog": {
@@ -6288,8 +6279,8 @@
           "dev": true,
           "optional": true,
           "requires": {
-            "os-homedir": "1.0.2",
-            "os-tmpdir": "1.0.2"
+            "os-homedir": "^1.0.0",
+            "os-tmpdir": "^1.0.0"
           }
         },
         "path-is-absolute": {
@@ -6426,7 +6417,7 @@
           "dev": true,
           "optional": true,
           "requires": {
-            "hoek": "2.16.3"
+            "hoek": "2.x.x"
           }
         },
         "sshpk": {
@@ -8026,6 +8017,12 @@
         "lex-parser": "0.1.x",
         "nomnom": "1.5.2"
       }
+    },
+    "jquery": {
+      "version": "3.3.1",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.3.1.tgz",
+      "integrity": "sha512-Ubldcmxp5np52/ENotGxlLe6aGMvmF4R8S6tZjsP6Knsaxd/xp3Zrh50cG93lR6nPXyUFwzN3ZSOQI0wRJNdGg==",
+      "dev": true
     },
     "js-base64": {
       "version": "2.4.0",
@@ -13688,7 +13685,7 @@
     "vlq": {
       "version": "0.2.3",
       "resolved": "https://registry.npmjs.org/vlq/-/vlq-0.2.3.tgz",
-      "integrity": "sha1-jz5DKM9jsVQMDWfhsneDhviXWyY=",
+      "integrity": "sha512-DRibZL6DsNhIgYQ+wNdWDL2SL3bKPlVrRiBqV5yuMm++op8W4kGFtaQfCs4KEJn0wBZcHVHJ3eoywX8983k1ow==",
       "dev": true
     },
     "vm-browserify": {

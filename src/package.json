@@ -60,5 +60,7 @@
     "electron-updater": "^2.20.1"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.31",
+    "jquery": "^3.3.1"
   }
 }
