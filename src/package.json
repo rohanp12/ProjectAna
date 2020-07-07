@@ -58,13 +58,13 @@
   },
   "dependencies": {
     "electron-updater": "^2.20.1",
-    "keyword-extractor": "0.0.19",
     "spacy": "0.0.4",
     "spacy-nlp": "git+https://github.com/jeffreyflynt/spacy-nlp.git",
     "textrank": "^1.0.5"
   },
   "devDependencies": {
     "@angular/compiler": "^5.1.1",
-    "@types/jquery": "^3.3.31"
+    "@types/jquery": "^3.3.31",
+    "keyword-extractor": "0.0.19"
   }
 }
