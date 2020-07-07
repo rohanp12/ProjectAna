@@ -60,8 +60,8 @@
     "electron-updater": "^2.20.1"
   },
   "devDependencies": {
+    "@angular/compiler": "^5.2.11",
     "@types/jquery": "^3.3.31",
-    "jquery": "^3.3.1",
-    "@angular/compiler-cli": "~5.1.1"
+    "jquery": "^3.3.1"
   }
 }
