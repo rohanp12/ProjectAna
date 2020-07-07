@@ -108,7 +108,10 @@ export class SimulatorService {
 			type: "POST",
 			url: "/TStoPythonInterfacer.py",
 			data: { param: input},
-				success: callbackFunc
+			success: callbackFunc,
+			error: function() {
+				userData = "Error detected!"
+			}
 			});
   		}
 
@@ -250,7 +253,7 @@ export class SimulatorService {
 							let ip = ipMsgContent.input as chatModels.TextInput;
 							userData = ip.val;
 
-							//postData(userData)
+							postData(userData)
 
 							let clickedBtn = this.getNodeButtonByType(models.ButtonType.GetText);
 							if (clickedBtn)
