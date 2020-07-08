@@ -1,3 +1,4 @@
+import {keywordExtraction} from './keywordExtractor';
 import { Injectable } from '@angular/core';
 import { Http, Headers, URLSearchParams } from '@angular/http';
 
@@ -10,9 +11,6 @@ import { GlobalsService } from '../services/globals.service';
 import { InfoDialogService } from '../services/info-dialog.service';
 import { SimulatorFrameComponent } from '../components/studio/simulator-frame/simulator-frame.component';
 import { CarouselButton } from '../models/chatflow.models';
-
-import {keywordExtraction} from './keywordExtractor';
-
 @Injectable()
 export class SimulatorService {
 
@@ -104,7 +102,6 @@ export class SimulatorService {
 	}
 
 	private processIncomingMessage(chatMsg: chatModels.ANAChatMessage) {
-
 		let message = chatMsg.data;
 		if (message.type == chatModels.MessageType.INPUT) {
 			let ipMsgContent = message.content as chatModels.InputContent;
@@ -235,12 +232,8 @@ export class SimulatorService {
 						break;
 					case chatModels.InputType.TEXT:
 						{
-
 							let ip = ipMsgContent.input as chatModels.TextInput;
-							userData = ip.val;
-
-							userData = keywordExtraction(userData);
-
+							userData = keywordExtraction(ip.val);
 							let clickedBtn = this.getNodeButtonByType(models.ButtonType.GetText);
 							if (clickedBtn)
 								nextNodeId = clickedBtn.NextNodeId;
