@@ -65,6 +65,7 @@
   "devDependencies": {
     "@angular/compiler": "^5.1.1",
     "@types/jquery": "^3.3.31",
+    "jquery": "^3.3.1",
     "keyword-extractor": "0.0.19"
   }
 }
